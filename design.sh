@@ -187,9 +187,9 @@ section "PROJECTS" sec-projects.svg
 stack
 card card-lisa-cyber.svg "01" "lisa-cyber" "Simulates realistic user activity inside|a cyber range so blue teams train|against believable background noise." "Python,Docker Compose,GitHub Actions"
 card card-barcode-detection.svg "02" "barcode-detection" "Conveyor tunnel prototype: decodes|barcodes from several camera angles|and merges them per box, deduplicated." "Python,ZBar,YOLO-ready"
-card card-enose-core.svg "03" "enose-core" "Electronic-nose platform: time-series|feature extraction and a substance|classifier behind a FastAPI service." "Python,scikit-learn,FastAPI"
-card card-bot-notification.svg "04" "bot-notification" "Telegram bot that sends a daily meal|reminder at a time the user picks." "Python,Telegram API,Railway"
-card card-robo-guide.svg "05" "robo-guide" "Guide robot that understands its|surroundings with a vision-language|model: team VLM module." "Python,VLM,Robotics"
+card card-enose-core.svg "04" "enose-core" "Electronic-nose platform: time-series|feature extraction and a substance|classifier behind a FastAPI service." "Python,scikit-learn,FastAPI"
+card card-bot-notification.svg "05" "bot-notification" "Telegram bot that sends a daily meal|reminder at a time the user picks." "Python,Telegram API,Railway"
+card card-robo-guide.svg "06" "robo-guide" "Guide robot that understands its|surroundings with a vision-language|model: team VLM module." "Python,VLM,Robotics"
 footer
 ls -1 "$out"
-card card-defect-segmentation.svg "06" "Defect-Segmentation" "Binary defect segmentation on MVTec AD:|reproducible, leakage-checked splits|and a U-Net baseline in progress." "Python,OpenCV,scikit-learn,GitHub Actions"
+card card-defect-segmentation.svg "03" "Defect-Segmentation" "Binary defect segmentation on MVTec AD:|reproducible, leakage-checked splits|and a U-Net baseline in progress." "Python,OpenCV,scikit-learn,GitHub Actions"

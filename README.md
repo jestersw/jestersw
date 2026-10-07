@@ -32,5 +32,5 @@ Blue Team security experience from CTFs and cyber battles.
 </p>
 <p align="center">
   <a href="https://github.com/jestersw/bot-notification"><img src="assets/card-bot-notification.svg" width="49%" alt="bot-notification"></a>
-  <img src="assets/card-robo-guide.svg" width="49%" alt="robo-guide">
+  <a href="https://github.com/Innopolis-Robotics-Society/Robo-guide_vlm_team_one"><img src="assets/card-robo-guide.svg" width="49%" alt="robo-guide"></a>
 </p>
