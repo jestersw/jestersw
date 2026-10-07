@@ -7,8 +7,13 @@
 <rect x="1124" y="58" width="46" height="7" fill="#0B1F3A"/>
 <line x1="0" y1="92" x2="1200" y2="92" stroke="#0B1F3A" stroke-width="8"/>
 <line x1="1098" y1="0" x2="1098" y2="92" stroke="#0B1F3A" stroke-width="8"/>
-<rect x="50" y="122" width="330" height="44" fill="#0B1F3A"/>
-<text x="70" y="152" font-family="'Courier New',ui-monospace,monospace" font-size="22" font-weight="700" letter-spacing="1" fill="#EEF4FF">DEVOPS · ML · SECURITY</text>
+<rect x="50" y="122" width="420" height="44" fill="#0B1F3A"/>
+<text x="70" y="152" font-family="'Courier New',ui-monospace,monospace" font-size="22" font-weight="700" fill="#EEF4FF" textLength="380" lengthAdjust="spacingAndGlyphs">DEVOPS · ML · SECURITY</text>
+<rect x="756" y="132" width="400" height="44" fill="#0B1F3A"/>
+<rect x="746" y="122" width="170" height="44" fill="#0B1F3A"/>
+<text x="764" y="152" font-family="'Courier New',ui-monospace,monospace" font-size="20" font-weight="700" fill="#EEF4FF" textLength="134" lengthAdjust="spacingAndGlyphs">TELEGRAM</text>
+<rect x="916" y="122" width="230" height="44" fill="#3D7BF5" stroke="#0B1F3A" stroke-width="4"/>
+<text x="934" y="152" font-family="'Courier New',ui-monospace,monospace" font-size="20" font-weight="700" fill="#FFFFFF" textLength="194" lengthAdjust="spacingAndGlyphs">@JESTERSW</text>
 <text x="44" y="284" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="118" font-weight="900" fill="#0B1F3A" textLength="900" lengthAdjust="spacingAndGlyphs">INFRA THAT</text>
 <rect x="50" y="306" width="1146" height="254" fill="#3D7BF5"/>
 <text x="70" y="425" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="118" font-weight="900" fill="#FFFFFF" textLength="720" lengthAdjust="spacingAndGlyphs">SURVIVES</text>
@@ -21,10 +26,10 @@
 </g>
 <rect x="60" y="790" width="250" height="64" fill="#0B1F3A"/>
 <rect x="50" y="780" width="250" height="64" fill="#3D7BF5" stroke="#0B1F3A" stroke-width="4"/>
-<text x="175" y="822" text-anchor="middle" font-family="'Courier New',ui-monospace,monospace" font-size="26" font-weight="700" fill="#FFFFFF">6 PROJECTS</text>
+<text x="175" y="822" text-anchor="middle" font-family="'Courier New',ui-monospace,monospace" font-size="26" font-weight="700" fill="#FFFFFF" textLength="200" lengthAdjust="spacingAndGlyphs">5 PROJECTS</text>
 <rect x="340" y="790" width="250" height="64" fill="#0B1F3A"/>
 <rect x="330" y="780" width="250" height="64" fill="#EEF4FF" stroke="#0B1F3A" stroke-width="4"/>
-<text x="455" y="822" text-anchor="middle" font-family="'Courier New',ui-monospace,monospace" font-size="26" font-weight="700" fill="#0B1F3A">2024–2026</text>
+<text x="455" y="822" text-anchor="middle" font-family="'Courier New',ui-monospace,monospace" font-size="26" font-weight="700" fill="#0B1F3A" textLength="180" lengthAdjust="spacingAndGlyphs">2024–2026</text>
 <rect x="702" y="612" width="460" height="280" fill="#0B1F3A"/>
 <rect x="690" y="600" width="460" height="280" fill="#DCE8FF" stroke="#0B1F3A" stroke-width="6"/>
 <rect x="693" y="603" width="454" height="274" fill="url(#dots)"/>

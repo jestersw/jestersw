@@ -10,8 +10,14 @@ BOARD="#DCE8FF"
 SANS="'Arial Black','Helvetica Neue',Arial,sans-serif"
 MONO="'Courier New',ui-monospace,monospace"
 HANDLE="${HANDLE:-jestersw}"
+TG="${TG:-@JESTERSW}"
+COUNT="${COUNT:-5 PROJECTS}"
 
 tw() { echo $(( ${#1} * $2 * 6 / 10 + $3 )); }
+
+mtext() {
+  printf '<text x="%d" y="%d" font-family="%s" font-size="%d" font-weight="700" fill="%s" textLength="%d" lengthAdjust="spacingAndGlyphs">%s</text>' "$1" "$2" "$MONO" "$3" "$4" "$5" "$6"
+}
 
 win() {
   local x=$1 y=$2 k=$3
@@ -39,8 +45,6 @@ win() {
 }
 
 header() {
-  local chip="DEVOPS · ML · SECURITY"
-  local cw; cw=$(tw "$chip" 22 40)
   cat > "$out/header.svg" <<EOF
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920">
 <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="1.6" fill="#9DB8E8"/></pattern></defs>
@@ -51,8 +55,13 @@ header() {
 <rect x="1124" y="58" width="46" height="7" fill="$INK"/>
 <line x1="0" y1="92" x2="1200" y2="92" stroke="$INK" stroke-width="8"/>
 <line x1="1098" y1="0" x2="1098" y2="92" stroke="$INK" stroke-width="8"/>
-<rect x="50" y="122" width="$cw" height="44" fill="$INK"/>
-<text x="70" y="152" font-family="$MONO" font-size="22" font-weight="700" letter-spacing="1" fill="$BG">$chip</text>
+<rect x="50" y="122" width="420" height="44" fill="$INK"/>
+$(mtext 70 152 22 "$BG" 380 "DEVOPS · ML · SECURITY")
+<rect x="756" y="132" width="400" height="44" fill="$INK"/>
+<rect x="746" y="122" width="170" height="44" fill="$INK"/>
+$(mtext 764 152 20 "$BG" 134 "TELEGRAM")
+<rect x="916" y="122" width="230" height="44" fill="$ACC" stroke="$INK" stroke-width="4"/>
+$(mtext 934 152 20 "#FFFFFF" 194 "$TG")
 <text x="44" y="284" font-family="$SANS" font-size="118" font-weight="900" fill="$INK" textLength="900" lengthAdjust="spacingAndGlyphs">INFRA THAT</text>
 <rect x="50" y="306" width="1146" height="254" fill="$ACC"/>
 <text x="70" y="425" font-family="$SANS" font-size="118" font-weight="900" fill="#FFFFFF" textLength="720" lengthAdjust="spacingAndGlyphs">SURVIVES</text>
@@ -65,10 +74,10 @@ header() {
 </g>
 <rect x="60" y="790" width="250" height="64" fill="$INK"/>
 <rect x="50" y="780" width="250" height="64" fill="$ACC" stroke="$INK" stroke-width="4"/>
-<text x="175" y="822" text-anchor="middle" font-family="$MONO" font-size="26" font-weight="700" fill="#FFFFFF">6 PROJECTS</text>
+<text x="175" y="822" text-anchor="middle" font-family="$MONO" font-size="26" font-weight="700" fill="#FFFFFF" textLength="200" lengthAdjust="spacingAndGlyphs">$COUNT</text>
 <rect x="340" y="790" width="250" height="64" fill="$INK"/>
 <rect x="330" y="780" width="250" height="64" fill="$BG" stroke="$INK" stroke-width="4"/>
-<text x="455" y="822" text-anchor="middle" font-family="$MONO" font-size="26" font-weight="700" fill="$INK">2024–2026</text>
+<text x="455" y="822" text-anchor="middle" font-family="$MONO" font-size="26" font-weight="700" fill="$INK" textLength="180" lengthAdjust="spacingAndGlyphs">2024–2026</text>
 <rect x="702" y="612" width="460" height="280" fill="$INK"/>
 <rect x="690" y="600" width="460" height="280" fill="$BOARD" stroke="$INK" stroke-width="6"/>
 <rect x="693" y="603" width="454" height="274" fill="url(#dots)"/>
@@ -92,7 +101,7 @@ section() {
 <svg xmlns="http://www.w3.org/2000/svg" width="$((w+10))" height="64" viewBox="0 0 $((w+10)) 64">
 <rect x="10" y="10" width="$w" height="52" fill="$ACC"/>
 <rect x="0" y="0" width="$w" height="52" fill="$INK"/>
-<text x="24" y="35" font-family="$MONO" font-size="26" font-weight="700" letter-spacing="1" fill="$BG">$name</text>
+$(mtext 24 35 26 "$BG" $((w-48)) "$name")
 </svg>
 EOF
 }
@@ -108,13 +117,15 @@ stack() {
   )
   for row in "${rows[@]}"; do
     IFS='|' read -r label fill tc sh items <<< "$row"
-    body+=$(printf '<rect x="40" y="%d" width="190" height="44" fill="%s"/><text x="56" y="%d" font-family="%s" font-size="20" font-weight="700" letter-spacing="1" fill="%s">%s</text>' "$y" "$INK" $((y+29)) "$MONO" "$BG" "$label")
+    body+=$(printf '<rect x="40" y="%d" width="190" height="44" fill="%s"/>' "$y" "$INK")
+    body+=$(mtext 56 $((y+29)) 20 "$BG" $(( ${#label} * 12 )) "$label")
     x=262
     IFS=',' read -ra arr <<< "$items"
     for item in "${arr[@]}"; do
-      w=$(tw "$item" 20 32)
+      w=$(tw "${item//&amp;/&}" 20 32)
       if (( x + w > 1160 )); then x=262; y=$((y+62)); fi
-      body+=$(printf '<rect x="%d" y="%d" width="%d" height="44" fill="%s"/><rect x="%d" y="%d" width="%d" height="44" fill="%s" stroke="%s" stroke-width="3"/><text x="%d" y="%d" font-family="%s" font-size="20" font-weight="700" fill="%s">%s</text>' $((x+6)) $((y+6)) "$w" "$sh" "$x" "$y" "$w" "$fill" "$INK" $((x+16)) $((y+29)) "$MONO" "$tc" "$item")
+      body+=$(printf '<rect x="%d" y="%d" width="%d" height="44" fill="%s"/><rect x="%d" y="%d" width="%d" height="44" fill="%s" stroke="%s" stroke-width="3"/>' $((x+6)) $((y+6)) "$w" "$sh" "$x" "$y" "$w" "$fill" "$INK")
+      body+=$(mtext $((x+16)) $((y+29)) 20 "$tc" $((w-32)) "$item")
       x=$((x+w+16))
     done
     y=$((y+84))
@@ -141,7 +152,8 @@ card() {
   IFS=',' read -ra arr <<< "$tags"
   for tag in "${arr[@]}"; do
     w=$(tw "$tag" 16 26)
-    body+=$(printf '<rect x="%d" y="214" width="%d" height="36" fill="#FFFFFF" stroke="%s" stroke-width="3"/><text x="%d" y="238" font-family="%s" font-size="16" font-weight="700" fill="%s">%s</text>' "$x" "$w" "$INK" $((x+13)) "$MONO" "$INK" "$tag")
+    body+=$(printf '<rect x="%d" y="214" width="%d" height="36" fill="#FFFFFF" stroke="%s" stroke-width="3"/>' "$x" "$w" "$INK")
+    body+=$(mtext $((x+13)) 238 16 "$INK" $((w-26)) "$tag")
     x=$((x+w+12))
   done
   cat > "$out/$file" <<EOF
@@ -162,7 +174,7 @@ footer() {
   cat > "$out/footer.svg" <<EOF
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110">
 <rect x="4" y="4" width="1192" height="102" fill="$ACC" stroke="$INK" stroke-width="8"/>
-<text x="600" y="64" text-anchor="middle" font-family="$MONO" font-size="22" font-weight="700" fill="#FFFFFF">infra that survives failover · ml that ships · security by design</text>
+<text x="600" y="64" text-anchor="middle" font-family="$MONO" font-size="22" font-weight="700" fill="#FFFFFF" textLength="900" lengthAdjust="spacingAndGlyphs">infra that survives failover · ml that ships · security by design</text>
 </svg>
 EOF
 }
@@ -177,5 +189,6 @@ card card-lisa-cyber.svg "01" "lisa-cyber" "Simulates realistic user activity in
 card card-barcode-detection.svg "02" "barcode-detection" "Conveyor tunnel prototype: decodes|barcodes from several camera angles|and merges them per box, deduplicated." "Python,ZBar,YOLO-ready"
 card card-enose-core.svg "03" "enose-core" "Electronic-nose platform: time-series|feature extraction and a substance|classifier behind a FastAPI service." "Python,scikit-learn,FastAPI"
 card card-bot-notification.svg "04" "bot-notification" "Telegram bot that sends a daily meal|reminder at a time the user picks." "Python,Telegram API,Railway"
+card card-robo-guide.svg "05" "robo-guide" "Guide robot that understands its|surroundings with a vision-language|model: team VLM module." "Python,VLM,Robotics"
 footer
 ls -1 "$out"

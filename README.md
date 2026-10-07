@@ -1,9 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="jestersw: infra that survives failover">
-</p>
-
-<p align="center">
-  <a href="https://t.me/Jestersw"><img src="https://img.shields.io/badge/Telegram-%40Jestersw-3D7BF5?style=for-the-badge&labelColor=0B1F3A" alt="Telegram"></a>
+  <a href="https://t.me/Jestersw"><img src="assets/header.svg" width="100%" alt="jestersw: infra that survives failover. Telegram @Jestersw"></a>
 </p>
 
 <img src="assets/sec-whoami.svg" height="40" alt="whoami">
@@ -33,6 +29,9 @@ Blue Team security experience from CTFs and cyber battles.
 <p align="center">
   <a href="https://github.com/CreoCot/enose-core"><img src="assets/card-enose-core.svg" width="49%" alt="enose-core"></a>
   <a href="https://github.com/jestersw/bot-notification"><img src="assets/card-bot-notification.svg" width="49%" alt="bot-notification"></a>
+</p>
+<p align="center">
+  <img src="assets/card-robo-guide.svg" width="49%" alt="robo-guide">
 </p>
 
 <p align="center">
