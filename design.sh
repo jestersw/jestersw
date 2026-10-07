@@ -11,7 +11,7 @@ SANS="'Arial Black','Helvetica Neue',Arial,sans-serif"
 MONO="'Courier New',ui-monospace,monospace"
 HANDLE="${HANDLE:-jestersw}"
 TG="${TG:-@JESTERSW}"
-COUNT="${COUNT:-5 PROJECTS}"
+COUNT="${COUNT:-6 PROJECTS}"
 
 tw() { echo $(( ${#1} * $2 * 6 / 10 + $3 )); }
 
@@ -192,3 +192,4 @@ card card-bot-notification.svg "04" "bot-notification" "Telegram bot that sends 
 card card-robo-guide.svg "05" "robo-guide" "Guide robot that understands its|surroundings with a vision-language|model: team VLM module." "Python,VLM,Robotics"
 footer
 ls -1 "$out"
+card card-defect-segmentation.svg "06" "Defect-Segmentation" "Binary defect segmentation on MVTec AD:|reproducible, leakage-checked splits|and a U-Net baseline in progress." "Python,OpenCV,scikit-learn,GitHub Actions"

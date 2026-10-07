@@ -27,13 +27,10 @@ Blue Team security experience from CTFs and cyber battles.
   <a href="https://github.com/jestersw/barcode-detection"><img src="assets/card-barcode-detection.svg" width="49%" alt="barcode-detection"></a>
 </p>
 <p align="center">
+  <a href="https://github.com/jestersw/Defect-Segmentation"><img src="assets/card-defect-segmentation.svg" width="49%" alt="Defect-Segmentation"></a>
   <a href="https://github.com/CreoCot/enose-core"><img src="assets/card-enose-core.svg" width="49%" alt="enose-core"></a>
+</p>
+<p align="center">
   <a href="https://github.com/jestersw/bot-notification"><img src="assets/card-bot-notification.svg" width="49%" alt="bot-notification"></a>
-</p>
-<p align="center">
   <img src="assets/card-robo-guide.svg" width="49%" alt="robo-guide">
-</p>
-
-<p align="center">
-  <img src="assets/footer.svg" width="100%" alt="infra that survives failover · ml that ships · security by design">
 </p>
