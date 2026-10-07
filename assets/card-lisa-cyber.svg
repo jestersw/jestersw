@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="300" viewBox="0 0 590 300">
+<rect x="20" y="20" width="564" height="274" fill="#0B1F3A"/>
+<rect x="4" y="4" width="564" height="274" fill="#EEF4FF"/>
+<rect x="4" y="4" width="564" height="64" fill="#3D7BF5"/>
+<text x="36" y="47" font-family="'Courier New',ui-monospace,monospace" font-size="28" font-weight="700" fill="#FFFFFF">lisa-cyber</text>
+<text x="536" y="47" text-anchor="end" font-family="'Courier New',ui-monospace,monospace" font-size="22" font-weight="700" fill="#0B1F3A">01</text>
+<line x1="4" y1="68" x2="568" y2="68" stroke="#0B1F3A" stroke-width="5"/>
+<text x="36" y="118" font-family="'Courier New',ui-monospace,monospace" font-size="19" fill="#0B1F3A">Simulates realistic user activity inside</text><text x="36" y="148" font-family="'Courier New',ui-monospace,monospace" font-size="19" fill="#0B1F3A">a cyber range so blue teams train</text><text x="36" y="178" font-family="'Courier New',ui-monospace,monospace" font-size="19" fill="#0B1F3A">against believable background noise.</text><rect x="36" y="214" width="83" height="36" fill="#FFFFFF" stroke="#0B1F3A" stroke-width="3"/><text x="49" y="238" font-family="'Courier New',ui-monospace,monospace" font-size="16" font-weight="700" fill="#0B1F3A">Python</text><rect x="131" y="214" width="160" height="36" fill="#FFFFFF" stroke="#0B1F3A" stroke-width="3"/><text x="144" y="238" font-family="'Courier New',ui-monospace,monospace" font-size="16" font-weight="700" fill="#0B1F3A">Docker Compose</text><rect x="303" y="214" width="160" height="36" fill="#FFFFFF" stroke="#0B1F3A" stroke-width="3"/><text x="316" y="238" font-family="'Courier New',ui-monospace,monospace" font-size="16" font-weight="700" fill="#0B1F3A">GitHub Actions</text>
+<rect x="4" y="4" width="564" height="274" fill="none" stroke="#0B1F3A" stroke-width="6"/>
+</svg>
