@@ -193,3 +193,4 @@ card card-robo-guide.svg "06" "robo-guide" "Guide robot that understands its|sur
 footer
 ls -1 "$out"
 card card-defect-segmentation.svg "03" "Defect-Segmentation" "Binary defect segmentation on MVTec AD:|reproducible, leakage-checked splits|and a U-Net baseline in progress." "Python,OpenCV,scikit-learn,GitHub Actions"
+section "ACTIVITY" sec-activity.svg
