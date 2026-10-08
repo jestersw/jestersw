@@ -110,10 +110,15 @@ stack() {
   local body="" y=40 row label fill tc sh items x w item
   local -a arr
   local -a rows=(
-    "INFRA|$ACC|#FFFFFF|$INK|Linux,Docker,Kubernetes,Ansible,Terraform,GitLab CI,GitHub Actions,Nginx,Prometheus,Grafana"
-    "DATA|$DEEP|#FFFFFF|$INK|PostgreSQL,Redis,MongoDB"
-    "CODE|$SOFT|$INK|$INK|Python,Go,Bash,FastAPI,scikit-learn"
-    "SECURITY|$INK|$BG|$ACC|OWASP Top 10,MITRE ATT&amp;CK,Burp Suite,Wireshark"
+    "ML / CV|$SOFT|$INK|$INK|PyTorch,scikit-learn,OpenCV,scikit-image,Albumentations,U-Net,YOLO,NumPy,Pandas"
+    "CODE|$SOFT|$INK|$INK|Python,Bash,SQL,FastAPI,pytest,ruff"
+    "INFRA|$ACC|#FFFFFF|$INK|Linux,systemd,Docker,Docker Compose,Nginx"
+    "ORCHESTRATION|$ACC|#FFFFFF|$INK|Kubernetes,Helm,Minikube"
+    "CI/CD|$DEEP|#FFFFFF|$INK|GitLab CI,GitLab Runner,GitHub Actions,Container Registry"
+    "CLOUD / IAC|$DEEP|#FFFFFF|$INK|Terraform,Ansible,Google Cloud,Yandex Cloud"
+    "OBSERVABILITY|$ACC|#FFFFFF|$INK|Prometheus,Grafana,Alertmanager,VictoriaMetrics"
+    "DATA / HA|$DEEP|#FFFFFF|$INK|PostgreSQL,Patroni,etcd,HAProxy,keepalived,Redis Sentinel,MongoDB RS"
+    "SECURITY|$INK|$BG|$ACC|OWASP Top 10,MITRE ATT&amp;CK,MaxPatrol SIEM,PT NAD,Burp Suite,Wireshark"
   )
   for row in "${rows[@]}"; do
     IFS='|' read -r label fill tc sh items <<< "$row"

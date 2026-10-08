@@ -17,7 +17,7 @@ Blue Team security experience from CTFs and cyber battles.
 <img src="assets/sec-stack.svg" height="40" alt="stack">
 
 <p align="center">
-  <img src="assets/stack.svg" width="100%" alt="Linux, Docker, Kubernetes, Ansible, Terraform, GitLab CI, GitHub Actions, Nginx, Prometheus, Grafana, PostgreSQL, Redis, MongoDB, Python, Go, Bash, FastAPI, scikit-learn, OWASP Top 10, MITRE ATT&CK, Burp Suite, Wireshark">
+  <img src="assets/stack.svg" width="100%" alt="PyTorch, scikit-learn, OpenCV, scikit-image, Albumentations, U-Net, YOLO, Python, Bash, SQL, FastAPI, Linux, Docker, Kubernetes, Helm, GitLab CI, GitHub Actions, Terraform, Ansible, Google Cloud, Yandex Cloud, Prometheus, Grafana, Alertmanager, PostgreSQL, Patroni, etcd, HAProxy, keepalived, Redis Sentinel, MongoDB, OWASP Top 10, MITRE ATT&CK, MaxPatrol SIEM, PT NAD, Burp Suite, Wireshark">
 </p>
 
 <img src="assets/sec-projects.svg" height="40" alt="projects">
